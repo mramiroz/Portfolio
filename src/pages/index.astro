@@ -1,0 +1,35 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import About from '../components/About.astro';
+import Proyecto from '../components/Proyecto.astro';
+import Section from '../components/Section.astro';
+import Footer from '../components/Footer.astro';
+import Js from '../components/icons/Js.astro';
+import AstroI from '../components/icons/AstroI.astro';
+import Carrousell from '../components/Carrousell.astro';
+---
+
+<Layout title='Portfolio'>
+    <Header />
+    <main>
+        <About />
+        <Carrousell />
+        <Section section_name="Proyecto">
+            <Proyecto
+                name="Proyecto 1"
+                description="Lorem ipsunn cositas descriptivas"
+                img="https://t3.ftcdn.net/jpg/03/86/83/28/360_F_386832865_KzXYSvOLzUhztbeVD5d6pi2MBMqwBGAL.jpg"
+            />
+            <Proyecto
+            name="Proyecto 1"
+            description="Lorem ipsunn cositas descriptivas"
+            img="https://t3.ftcdn.net/jpg/03/86/83/28/360_F_386832865_KzXYSvOLzUhztbeVD5d6pi2MBMqwBGAL.jpg"
+            >
+                <li><Js /></li>
+                <li><AstroI /></li>
+            </Proyecto>
+        </Section>
+    </main>
+    <Footer />
+</Layout>

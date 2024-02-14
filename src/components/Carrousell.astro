@@ -1,0 +1,67 @@
+---
+import Js from './icons/Js.astro'
+import AstroI from './icons/AstroI.astro'
+import PHP from './icons/PHP.astro'
+import Laravel from './icons/Laravel.astro'
+import React from './icons/React.astro'
+import Java from './icons/Java.astro'
+
+---
+
+<div class="slider">
+    <div class="slide-track">
+        <div class="slide">
+            <Js width='40px' height='40px'/>
+        </div>
+        <div class="slide">
+            <AstroI width='40px' height='40px'/>
+        </div>
+        <div class="slide">
+            <PHP width='40px' height='40px'/>
+        </div>
+        <div class="slide">
+            <Laravel width='40px' height='40px'/>
+        </div>
+        <div class="slide">
+            <React width='40px' height='40px'/>
+        </div>
+        <div class="slide">
+            <Java width='40px' height='40px'/>
+        </div>
+    </div>
+</div>
+
+<style>
+    .slider {
+        width: 75vw;
+        height: auto;
+        margin: auto;
+        overflow: hidden;
+    }
+    
+    .slider .slide-track{
+        display: flex;
+        animation: scroll 20s linear infinite;
+        -webkit-animation: scroll 20s linear infinite;
+        width: calc(200px * 12);
+    }
+
+    .slider .slide{
+        width: 200px;
+    }
+
+    .slider .slide img{
+        width: 100%;
+    }
+
+    @keyframes scroll{
+        0% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+        100% {
+            -webkit-transform: translateX(calc(-200px * 6));
+            transform: translateX(calc(-200px * 6));
+        }
+    }
+</style>
