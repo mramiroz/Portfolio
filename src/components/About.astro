@@ -1,8 +1,38 @@
+---
+import Linkedin from "./icons/Linkedin.astro"
+import Github from "./icons/Github.astro"
+
+const socials = [
+    {
+        name: "Linkedin",
+        link: "https://www.linkedin.com/in/manuel-ramiro-zabaleta-93b9991a9/",
+        icon: Linkedin,
+        width: "40px",
+        height: "40px"
+    },
+    {
+        name: "Github",
+        link: "https://github.com/mramiroz",
+        icon: Github,
+        width: "40px",
+        height: "40px"
+    }
+]
+
+---
+
 <section id="about">
-    <img src="../../public/perfil.jpeg" alt="profile photo" id="about-img">
+    <img src="../../public/perfil.jpeg" alt="profile photo" id="about-img"/>
     <div id="about-info">
         <h1 id="about-name">Hi! I'm Manuel Ramiro</h1>
         <p id="about-desc">I'm a web developer passionate about technologies and in constant learning, I have worked on some full stack projects</p>
+        <div id="about-socials">
+            {socials.map(social => (
+                <a href={social.link} alt={social.name}>
+                    <social.icon width={social.width} height={social.height} />
+                </a>
+            ))}
+        </div>
     </div>
 </section>
 
@@ -27,5 +57,10 @@
 
     #about-info {
         margin: 0 30px;
+    }
+
+    #about-socials{
+        display: flex;
+        align-self: center;
     }
 </style>

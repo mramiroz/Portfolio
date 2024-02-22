@@ -6,34 +6,33 @@ import Laravel from './icons/Laravel.astro'
 import React from './icons/React.astro'
 import Java from './icons/Java.astro'
 
+const components = [
+    Js,
+    AstroI,
+    PHP,
+    Laravel,
+    React,
+    Java
+]
+
 ---
 
 <div class="slider">
     <div class="slide-track">
-        <div class="slide">
-            <Js width='40px' height='40px'/>
-        </div>
-        <div class="slide">
-            <AstroI width='40px' height='40px'/>
-        </div>
-        <div class="slide">
-            <PHP width='40px' height='40px'/>
-        </div>
-        <div class="slide">
-            <Laravel width='40px' height='40px'/>
-        </div>
-        <div class="slide">
-            <React width='40px' height='40px'/>
-        </div>
-        <div class="slide">
-            <Java width='40px' height='40px'/>
-        </div>
+        {[...components, ...components].map((Component, i) =>{
+            return(
+                <div class="slide">
+                    <Component width='40px' height='40px'/>
+                </div>
+            )
+        })}
+
     </div>
 </div>
 
 <style>
     .slider {
-        width: 75vw;
+        width: ;
         height: auto;
         margin: auto;
         overflow: hidden;
@@ -41,7 +40,7 @@ import Java from './icons/Java.astro'
     
     .slider .slide-track{
         display: flex;
-        animation: scroll 20s linear infinite;
+        animation: scroll 40s linear infinite;
         -webkit-animation: scroll 20s linear infinite;
         width: calc(200px * 12);
     }
