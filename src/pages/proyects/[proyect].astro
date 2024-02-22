@@ -10,9 +10,9 @@ export function getStaticPaths(){
 const selectedProyect = proyect.find(proyect => proyect.route === Astro.params.proyect);
 ---
 
-<Layout title={selectedProyect.name}>
+<Layout title={selectedProyect?.name ?? 'Proyecto'}>
     <Header />
-    <h1>Titulo: {selectedProyect.name}</h1>
-    <p>{selectedProyect.description}</p>
-    <img src={selectedProyect.image}  />
+    <h1>Titulo: {selectedProyect?.name}</h1>
+    <p>{selectedProyect?.description}</p>
+    <img src={selectedProyect?.image}  />
 </Layout>
