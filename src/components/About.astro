@@ -28,7 +28,7 @@ const socials = [
         <p id="about-desc">I'm a web developer passionate about technologies and in constant learning, I have worked on some full stack projects</p>
         <div id="about-socials">
             {socials.map(social => (
-                <a href={social.link} alt={social.name}>
+                <a href={social.link} title={social.name}>
                     <social.icon width={social.width} height={social.height} />
                 </a>
             ))}
