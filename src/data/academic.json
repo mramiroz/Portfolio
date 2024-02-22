@@ -1,0 +1,16 @@
+[
+    {
+        "title": "Bachillerato Ciencias Sociales",
+        "center": "IES La Laboral",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed etiam, qui illud non dubitant bonum dicere",
+        "date_start": "2010",
+        "date_end": "2012"
+    },
+    {
+        "title": "Desarrollo de Aplicaciones Web",
+        "center": "IES La Laboral",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed etiam, qui illud non dubitant bonum dicere",
+        "date_start": "2012",
+        "date_end": "2014"
+    }
+]

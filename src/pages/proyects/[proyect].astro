@@ -1,0 +1,18 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.astro'
+import proyect from '../../data/proyects.json'
+
+export function getStaticPaths(){
+    return proyect.map(proyect => ({params: {proyect: proyect.route}}))
+}
+
+const selectedProyect = proyect.find(proyect => proyect.route === Astro.params.proyect);
+---
+
+<Layout title={selectedProyect.name}>
+    <Header />
+    <h1>Titulo: {selectedProyect.name}</h1>
+    <p>{selectedProyect.description}</p>
+    <img src={selectedProyect.image}  />
+</Layout>

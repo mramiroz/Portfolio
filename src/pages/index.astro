@@ -8,6 +8,9 @@ import Footer from '../components/Footer.astro';
 import Js from '../components/icons/Js.astro';
 import AstroI from '../components/icons/AstroI.astro';
 import Carrousell from '../components/Carrousell.astro';
+import Academic from '../components/Academic.astro';
+import proyects from '../data/proyects.json';
+import academic from '../data/academic.json';
 ---
 
 <Layout title='Portfolio'>
@@ -15,20 +18,26 @@ import Carrousell from '../components/Carrousell.astro';
     <main>
         <About />
         <Carrousell />
+        <Section section_name="Academic Facts">
+            {academic.map((proyecto) =>(
+                <Academic 
+                    title={proyecto.title}
+                    center={proyecto.center}
+                    description={proyecto.description}
+                    date_start={proyecto.date_start}
+                    date_end={proyecto.date_end}
+                />
+            ))}
+        </Section>
         <Section section_name="Proyecto">
-            <Proyecto
-                name="Proyecto 1"
-                description="Lorem ipsunn cositas descriptivas"
-                img="https://t3.ftcdn.net/jpg/03/86/83/28/360_F_386832865_KzXYSvOLzUhztbeVD5d6pi2MBMqwBGAL.jpg"
-            />
-            <Proyecto
-            name="Proyecto 1"
-            description="Lorem ipsunn cositas descriptivas"
-            img="https://t3.ftcdn.net/jpg/03/86/83/28/360_F_386832865_KzXYSvOLzUhztbeVD5d6pi2MBMqwBGAL.jpg"
-            >
-                <li><Js /></li>
-                <li><AstroI /></li>
-            </Proyecto>
+            {proyects.map((proyecto) => (
+                <Proyecto 
+                    name={proyecto.name}
+                    description={proyecto.description}
+                    img={proyecto.image}
+                    route={proyecto.route}
+                />
+            ))}
         </Section>
     </main>
     <Footer />

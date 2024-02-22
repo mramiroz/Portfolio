@@ -3,18 +3,23 @@ import type { ComponentInstance } from "astro";
 
 interface Proyect {
     name: string;
+    route: string;
     description: string;
     img: string;
 }
-const { name, description, tech, img } = Astro.props
+const { name, route, description, tech, img } = Astro.props
 ---
 <article>
-    <img src={ img } alt="">
-    <h2 class="proyect-name">{ name }</h2>
-    <p class="proyect-desc">{ description }</p>
-    <ul class="proyect-tech">
-        <slot />
-    </ul>
+    <a href={`/proyects/${route}`} >
+        <img class="proyect-img" src={ img } alt="">
+        <div class="proyect-info">
+            <h2 class="proyect-name">{ name }</h2>
+            <p class="proyect-desc">{ description }</p>
+            <ul class="proyect-tech">
+                <slot />
+            </ul>
+        </div>
+    </a>
 </article>
 
 <style>
@@ -23,12 +28,18 @@ const { name, description, tech, img } = Astro.props
         flex-direction: column;
         align-items: center;
         margin: 1rem;
-        padding: 1rem;
+        padding: 1.5rem;
         border-radius: 10px;
         background-color: #333;
         
     }
-    article img {
+    article a{
+        text-decoration: none;
+        color: white;
+        width: 100%;
+        height: 100%;
+    }
+    .proyect-img {
         width: 100%;
         height: 200px;
         object-fit: cover;
@@ -44,13 +55,5 @@ const { name, description, tech, img } = Astro.props
 
     .proyect-tech li {
         margin: 0 0.5rem;
-    }
-
-    .proyect-name {
-        margin: 0.5rem 0;
-    }
-
-    .proyect-desc {
-        text-align: center;
     }
 </style>

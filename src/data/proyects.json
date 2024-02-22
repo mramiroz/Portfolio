@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Proyect 1",
+        "description": "This is a description of the project 1",
+        "image": "https://via.placeholder.com/150",
+        "route": "project1"
+    },
+    {
+        "name": "Proyect 2",
+        "description": "This is a description of the project 2",
+        "image": "https://via.placeholder.com/150",
+        "route": "project2"
+    },
+    {
+        "name": "Proyect 3",
+        "description": "This is a description of the project 3",
+        "image": "https://via.placeholder.com/150",
+        "route": "project3"
+    }
+]

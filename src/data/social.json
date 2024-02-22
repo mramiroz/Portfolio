@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Linkedin",
+        "link": "https://www.linkedin.com/in/manuel-ramiro-zabaleta-93b9991a9/",
+        "icon": "Linkedin",
+        "width": "40px",
+        "height": "40px"
+    },
+    {
+        "name": "Github",
+        "link": "https://github.com/mramiroz",
+        "icon": "Github",
+        "width": "40px",
+        "height": "40px"
+    }
+]
