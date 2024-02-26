@@ -31,7 +31,11 @@ const { name, route, description, tech, img } = Astro.props
         padding: 1.5rem;
         border-radius: 10px;
         background-color: #333;
-        
+        cursor: pointer;
+        transition: box-shadow 0.3s ease;
+    }
+    article:hover {
+        box-shadow: 0 0 10px 5px #333;
     }
     article a{
         text-decoration: none;
@@ -41,7 +45,7 @@ const { name, route, description, tech, img } = Astro.props
     }
     .proyect-img {
         width: 100%;
-        height: 200px;
+        height: 250px;
         object-fit: cover;
         border-radius: 5px;
     }

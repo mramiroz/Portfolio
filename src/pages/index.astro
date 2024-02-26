@@ -5,12 +5,11 @@ import About from '../components/About.astro';
 import Proyecto from '../components/Proyecto.astro';
 import Section from '../components/Section.astro';
 import Footer from '../components/Footer.astro';
-import Js from '../components/icons/Js.astro';
-import AstroI from '../components/icons/AstroI.astro';
 import Carrousell from '../components/Carrousell.astro';
 import Academic from '../components/Academic.astro';
 import proyects from '../data/proyects.json';
 import academic from '../data/academic.json';
+import Copy from '../components/Copy.astro';
 ---
 
 <Layout title='Portfolio'>
@@ -18,6 +17,7 @@ import academic from '../data/academic.json';
     <main>
         <About />
         <Carrousell />
+        <Copy hide={false} copy="Estos son algunos de los proyectos en los que he trabajado."  /> 
         <Section section_name="Academic Facts">
             {academic.map((proyecto) =>(
                 <Academic 
@@ -29,7 +29,7 @@ import academic from '../data/academic.json';
                 />
             ))}
         </Section>
-        <Section section_name="Proyecto">
+        <Section section_name="Proyectos">
             {proyects.map((proyecto) => (
                 <Proyecto 
                     name={proyecto.name}

@@ -1,0 +1,27 @@
+---
+interface Props{
+    copy: string;
+    hide: boolean;
+}
+
+const { copy, hide } = Astro.props;
+
+---
+<div>
+    <p hidden={hide} id="textToCopy">{copy}</p>
+    <code>{copy}</code>
+    <button type="button" id="copyButton">Copy</button>
+</div>
+
+<script>
+    const copyButton = document.getElementById('copyButton');
+    const textToCopy = document.getElementById('textToCopy');
+    if (textToCopy) {
+        const text = textToCopy.innerText;
+    }
+    if (copyButton) {
+        copyButton.addEventListener('click', function(){
+            const text = textToCopy?.innerText;
+        });
+    }
+</script>
